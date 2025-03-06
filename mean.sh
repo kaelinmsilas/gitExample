@@ -25,7 +25,7 @@ cut -d, -f"$COLUMN" "$FILE" | tail -n +2 | {
     if [ "$count" -gt 0 ]; then
         echo "scale=2; $sum / $count" | bc -l
     else
-        echo "No valid data" >&2
+        echo "No valid data!" >&2
         exit 1
     fi
 }
